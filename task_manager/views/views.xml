@@ -74,11 +74,19 @@
                 </p>
             </field>
         </record>
-
+        <record id="action_task_report" model="ir.actions.report">
+            <field name="name">Task Report</field>
+            <field name="model">task_manager.task</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">task_manager.report_task</field>
+            <field name="report_file">task_manager.report_task</field>
+            <field name="binding_model_id" ref="task_manager.model_task_manager_task"/>
+            <field name="binding_type">report</field>
+        </record>
 
         <menuitem id="menu_task_manager" name="Task Manager" sequence="187"/>
         <menuitem id="menu_task_list" name="Tasks" parent="menu_task_manager" action="action_task_management"/>
-
+        <menuitem id="menu_task_report" name="Task Report" action="action_task_report" parent="menu_task_manager"/>
 
     </data>
 </odoo>
