@@ -5,6 +5,10 @@
             <field name="model">task_manager.task</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <button string="Mark as Completed" type="object" name="mark_task_completed"
+                                invisible="completed == True"/>
+                    </header>
                     <sheet>
                         <group>
 

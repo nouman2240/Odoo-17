@@ -24,3 +24,7 @@ class TMTasks(models.Model):
                 task.days_until_deadline =  delta.days
             else:
                 task.days_until_deadline = 0
+    
+    def mark_task_completed(self):
+        self.completed = True
+    
